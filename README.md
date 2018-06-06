@@ -1,4 +1,4 @@
-Code Repository
+Cde Repository
 =========================
 
 This project is my personal code repository. The codes for learning the algorithm and data structure include:
@@ -31,3 +31,9 @@ Templates
 -----------------
 
 The templates of some classical algorithms.
+
+
+Epilogue
+-----------------
+
+If you want to see the details of the solutions, you can move to my [CSDN blog](http://blog.csdn.net/keshuai19940722).

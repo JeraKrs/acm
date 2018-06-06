@@ -13,8 +13,8 @@ Codes
 
 The folder contains the codes which are the solution of the question in some Online Judging systems. These Online Judging systems are listed below:
 
-- [BNU](http://www.bnuoj.com/v3/index.php): Online Judge for the Beijing Normal University
-- [CodeForces](http://codeforces.com/): The biggest Online Judge in Russia for programming competitions and contests, programming community.  
+- [BNU](http://www.bnuoj.com/v3/index.php): Online Judge for the Beijing Normal University.
+- [CodeForces](http://codeforces.com/): The biggest Online Judge in Russia for programming competitions and contests.
 - [FZU](http://acm.fzu.edu.cn/): Online Judge for the Fuzhou University.
 - [HDU](http://acm.hdu.edu.cn/): Online Judge for the Hangzhou Dianzi University.
 - [HIHO](https://hihocoder.com/): HihoCoder is a community in China to learn and practice, compete and make friends, stand out and get hired.
@@ -25,6 +25,12 @@ The folder contains the codes which are the solution of the question in some Onl
 - [URAL](http://acm.timus.ru/): Timus Online Judge is the largest Russian archive of programming problems with automatic judging system.
 - [UVA](https://uva.onlinejudge.org/): UVa Online Judge is an online automated judge for programming problems hosted by University of Valladolid.
 - [ZOJ](http://acm.zju.edu.cn/onlinejudge/): Online Judge for the Zhejiang University.
+
+There are 1961 problems I have solved. To run the command for calculate the number of solution code:
+
+```
+$ ls -lR codes | grep cpp | wc -l
+```
 
 
 Templates

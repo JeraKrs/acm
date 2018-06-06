@@ -26,7 +26,11 @@ The folder contains the codes which are the solution of the question in some Onl
 - [UVA](https://uva.onlinejudge.org/): UVa Online Judge is an online automated judge for programming problems hosted by University of Valladolid.
 - [ZOJ](http://acm.zju.edu.cn/onlinejudge/): Online Judge for the Zhejiang University.
 
+<<<<<<< HEAD
 There are 1961 problems I have solved. To run the command for calculating the number of solution code:
+=======
+There are 1961 problems I have solved. To run the command for calculate the number of solution code:
+>>>>>>> d9b06d69d95b4c63a8cfa8d04493bad96fed8ddd
 
 ```
 $ ls -lR codes | grep cpp | wc -l

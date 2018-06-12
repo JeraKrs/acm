@@ -38,6 +38,23 @@ Templates
 
 The templates of some classical algorithms.
 
+**Basic Algorithm**
+- Sorting algorithm: bubble sort, insertion sort.
+
+**Data Structure**
+- Linear list: queue, stack.
+- String: Manachar, KMP.
+- Tree: binary tree, segment tree.
+
+**Number Theory**
+- Prime number:
+- Exponentiation by squaring:
+- Game theory:
+
+**Computational Geometry**
+
+**Graph Theory**
+
 
 Epilogue
 -----------------

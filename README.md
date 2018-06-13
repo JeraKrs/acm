@@ -11,7 +11,7 @@ Most of the codes are written to prepare the competition which named ACM Interna
 Codes
 -----------------
 
-The folder contains the codes which are the solution of the question in some Online Judging systems. These Online Judging systems are listed below:
+The folder contains the codes that are the solution of the question in some Online Judging systems. These Online Judging systems are listed below:
 
 - [BNU](http://www.bnuoj.com/v3/index.php): Online Judge for the Beijing Normal University.
 - [CodeForces](http://codeforces.com/): The biggest Online Judge in Russia for programming competitions and contests.
@@ -36,10 +36,11 @@ $ ls -lR codes | grep cpp | wc -l
 Templates
 -----------------
 
-The templates of some classical algorithms.
+There are some templates about the classical algorithm and data structure.
+
 
 **Basic Algorithm**
-- Sorting algorithm: bubble sort, insertion sort.
+- Sorting algorithm: bubble sort, insertion sort, selection sort, shell sort, heap sort, merge sort, quick sort, counting sort, radix sort.
 
 **Data Structure**
 - Linear list: queue, stack.

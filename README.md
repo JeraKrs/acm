@@ -26,7 +26,7 @@ The folder contains the codes that are the solution of the question in some Onli
 - [UVA](https://uva.onlinejudge.org/): UVa Online Judge is an online automated judge for programming problems hosted by University of Valladolid.
 - [ZOJ](http://acm.zju.edu.cn/onlinejudge/): Online Judge for the Zhejiang University.
 
-There are 2001 problems I have solved. To run the command for calculating the number of solution code:
+There are 2011 problems I have solved. To run the command for calculating the number of solution code:
 
 ```
 $ ls -lR codes | grep cpp | wc -l
@@ -36,11 +36,11 @@ $ ls -lR codes | grep cpp | wc -l
 Templates
 -----------------
 
-There are some templates about the classical algorithm and data structure.
+There are some templates about the classical algorithm and data structure, the content are listed below:
 
 
 **Basic Algorithm**
-- Sorting algorithm: bubble sort, insertion sort, selection sort, shell sort, heap sort, merge sort, quick sort, counting sort, radix sort.
+- [Sorting algorithm](https://github.com/JeraKrs/acm/tree/master/templates/basic_algorithm/sorting): bubble sort, insertion sort, selection sort, shell sort, heap sort, merge sort, quick sort, counting sort, radix sort.
 
 **Data Structure**
 - Linear list: queue, stack.

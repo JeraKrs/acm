@@ -8,47 +8,46 @@
   * Description: The implementation of queue.
   *
   * Function List: 
-     1. queue::queue(): construct a queue.
-	    - Params: none.
+	1. queue::queue(): construct a queue.
+		- Params: none.
 		- Return: none.
-
-     2. queue::queue(queue& q): construct a queue by a exist queue.
+	2. queue::queue(queue& q): construct a queue by a exist queue.
 		- Params: a valid queue.
 		- Return: none.
 
-	 3.	queue::~queue(): release a queue.
+	3. queue::~queue(): release a queue.
 		- Params: none.
 		- Return: none.
 
-     4. queue::size(): get the number of items in the queue.
+	4. queue::size(): get the number of items in the queue.
 		- Params: none.
 		- Return: the number of items in the queue.
 
-	 5. queue::empty(): test whether queue is empty.
+	5. queue::empty(): test whether queue is empty.
 		- Params: none.
 		- Return: true if the queue's size is 0, false otherwise.
 
-	 6. queue::push(Type item): inserts a new element at the end of the queue.
+	6. queue::push(Type item): inserts a new element at the end of the queue.
 		- Params: item to which the inserted element is initialized.
 		- Return: none.
 
-	 7. queue::pop(): removes the next element in the queue.
+	7. queue::pop(): removes the next element in the queue.
 		- Params: none.
 		- Return: none.
 
-	 8. queue::front(): access next element in the queue.
+	8. queue::front(): access next element in the queue.
 		- Params: none.
 		- Return: a reference to the next element in the queue.
 
-	 9. queue::operator= (queue& q): overload the copy operator.
+	9. queue::operator= (queue& q): overload the copy operator.
 		- Params: a valid queue.
 		- Return: a copy of the exist queue.
 
-	 10. queue::copy(queue& q): copy a exist queue.
+	10. queue::copy(queue& q): copy a exist queue.
 		- Params: a valid queue.
 		- Return: none.
 
-	 10. queue::destroy(): destroy the queue.
+	11. queue::destroy(): destroy the queue.
 		- Params: none.
 		- Return: none.
   *

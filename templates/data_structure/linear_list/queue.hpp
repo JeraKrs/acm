@@ -56,9 +56,6 @@
 #ifndef _queue_h_
 #define _queue_h_
 
-#include <exception>
-#include <iostream>
-
 template <typename Type>
 class queue;
 

@@ -109,6 +109,12 @@ template<typename Type>
 void queue<Type>::push(const Type& item)
 {
 	queue_item<Type> *temp = new queue_item<Type>(item);
+
+	if (temp == NULL) {
+		fprintf(stderr, "queue: Failed to apply for memory space.\n");
+		exit(1);
+	}
+
 	if (empty()) {
 		head = tail = temp;
 	} else {
@@ -118,11 +124,11 @@ void queue<Type>::push(const Type& item)
 	sz++;
 }
 
-template<typename Type>
+	template<typename Type>
 void queue<Type>::pop()
 {
 	if (head == NULL) {
-        fprintf(stderr, "queue: the queue is empty.\n");
+		fprintf(stderr, "queue: the queue is empty.\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -132,18 +138,18 @@ void queue<Type>::pop()
 	sz--;
 }
 
-template<typename Type>
+	template<typename Type>
 Type queue<Type>::front()
 {
 	if (head == NULL) {
-        fprintf(stderr, "queue: the queue is empty.\n");
+		fprintf(stderr, "queue: the queue is empty.\n");
 		exit(EXIT_FAILURE);
 	}
 
 	return head->item;
 }
 
-template<typename Type>
+	template<typename Type>
 queue<Type>& queue<Type>::operator= (const queue &q)
 {
 	if (&q == this) return *this;
@@ -153,13 +159,13 @@ queue<Type>& queue<Type>::operator= (const queue &q)
 	return *this;
 }
 
-template<typename Type>
+	template<typename Type>
 void queue<Type>::destroy()
 {
 	while(!empty()) pop();
 }
 
-template<typename Type>
+	template<typename Type>
 void queue<Type>::copy(const queue<Type>& q)
 {
 	queue_item<Type> *temp = q.head;

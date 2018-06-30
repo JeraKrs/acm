@@ -38,14 +38,13 @@ Templates
 
 There are some templates about the classical algorithm and data structure, the content are listed below:
 
-
 **Basic Algorithm**
 - [Sorting algorithm](https://github.com/JeraKrs/acm/tree/master/templates/basic_algorithm/sorting): bubble sort, insertion sort, selection sort, shell sort, heap sort, merge sort, quick sort, counting sort, radix sort.
 
 **Data Structure**
-- Linear list: queue, stack, linked list, skip list.
-- String: Manachar, KMP.
-- Tree: binary tree, segment tree.
+- Linear list: queue, stack, linked list.
+- String: manachar.
+- Tree:
 
 **Number Theory**
 - Prime number:

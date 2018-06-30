@@ -100,16 +100,23 @@ template<typename Type>
 void stack<Type>::push(const Type& item)
 {
 	stack_item<Type> *temp = new stack_item<Type>(item);
-	temp->next = head;
-	head = temp;
-	sz++;
+
+	if (temp == NULL) {
+		fprintf(stderr, "stack: Failed to apply for memory space.\n");
+		exit(1);
+	}
 }
 
-template<typename Type>
+temp->next = head;
+head = temp;
+sz++;
+}
+
+	template<typename Type>
 void stack<Type>::pop()
 {
 	if (head == NULL) {
-        fprintf(stderr, "stack: the stack is empty.\n");
+		fprintf(stderr, "stack: the stack is empty.\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -119,18 +126,18 @@ void stack<Type>::pop()
 	sz--;
 }
 
-template<typename Type>
+	template<typename Type>
 Type stack<Type>::top()
 {
 	if (head == NULL) {
-        fprintf(stderr, "stack: the stack is empty.\n");
+		fprintf(stderr, "stack: the stack is empty.\n");
 		exit(EXIT_FAILURE);
 	}
 
 	return head->item;
 }
 
-template<typename Type>
+	template<typename Type>
 stack<Type>& stack<Type>::operator= (const stack &s)
 {
 	if (&s == this) return *this;
@@ -140,13 +147,13 @@ stack<Type>& stack<Type>::operator= (const stack &s)
 	return *this;
 }
 
-template<typename Type>
+	template<typename Type>
 void stack<Type>::destroy()
 {
 	while(!empty()) pop();
 }
 
-template<typename Type>
+	template<typename Type>
 void stack<Type>::copy(const stack<Type>& s)
 {
 	sz = s.sz;

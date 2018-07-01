@@ -1,60 +1,62 @@
 /*********************************************************************************
-  * Copyright (c) 2018 Shuai Ke. All rights reserved.
-  *
-  * FileName: queue.hpp
-  * Author: jerakrs
-  * Version: 1.0
-  * Date: 18/06/2018
-  * Description: The implementation of queue.
-  *
-  * Function List: 
-	1. queue::queue(): construct a queue.
-		- Params: none.
-		- Return: none.
-	2. queue::queue(queue& q): construct a queue by a exist queue.
-		- Params: a valid queue.
-		- Return: none.
+ * Copyright (c) 2018 Shuai Ke. All rights reserved.
+ *
+ * FileName: queue.hpp
+ * Author: jerakrs
+ * Version: 1.0
+ * Date: 18/06/2018
+ * Description: The implementation of queue.
+ *
+ * Function List: 
+ 1. queue::queue(): construct a queue.
+ - Params: none.
+ - Return: none.
+ 2. queue::queue(queue& q): construct a queue by a exist queue.
+ - Params: a valid queue.
+ - Return: none.
 
-	3. queue::~queue(): release a queue.
-		- Params: none.
-		- Return: none.
+ 3. queue::~queue(): release a queue.
+ - Params: none.
+ - Return: none.
 
-	4. queue::size(): get the number of items in the queue.
-		- Params: none.
-		- Return: the number of items in the queue.
+ 4. queue::size(): get the number of items in the queue.
+ - Params: none.
+ - Return: the number of items in the queue.
 
-	5. queue::empty(): test whether queue is empty.
-		- Params: none.
-		- Return: true if the queue's size is 0, false otherwise.
+ 5. queue::empty(): test whether queue is empty.
+ - Params: none.
+ - Return: true if the queue's size is 0, false otherwise.
 
-	6. queue::push(Type item): inserts a new element at the end of the queue.
-		- Params: item to which the inserted element is initialized.
-		- Return: none.
+ 6. queue::push(Type item): inserts a new element at the end of the queue.
+ - Params: item to which the inserted element is initialized.
+ - Return: none.
 
-	7. queue::pop(): removes the next element in the queue.
-		- Params: none.
-		- Return: none.
+ 7. queue::pop(): removes the next element in the queue.
+ - Params: none.
+ - Return: none.
 
-	8. queue::front(): access next element in the queue.
-		- Params: none.
-		- Return: a reference to the next element in the queue.
+ 8. queue::front(): access next element in the queue.
+ - Params: none.
+ - Return: a reference to the next element in the queue.
 
-	9. queue::operator= (queue& q): overload the copy operator.
-		- Params: a valid queue.
-		- Return: a copy of the exist queue.
+ 9. queue::operator= (queue& q): overload the copy operator.
+ - Params: a valid queue.
+ - Return: a copy of the exist queue.
 
-	10. queue::copy(queue& q): copy a exist queue.
-		- Params: a valid queue.
-		- Return: none.
+ 10. queue::copy(queue& q): copy a exist queue.
+ - Params: a valid queue.
+ - Return: none.
 
-	11. queue::destroy(): destroy the queue.
-		- Params: none.
-		- Return: none.
-  *
-**********************************************************************************/
+ 11. queue::destroy(): destroy the queue.
+ - Params: none.
+ - Return: none.
+ *
+ **********************************************************************************/
 
 #ifndef _queue_h_
 #define _queue_h_
+
+#include <cstdlib>
 
 template <typename Type>
 class queue;
@@ -64,7 +66,7 @@ class queue_item {
 	friend class queue<Type>;
 
 	queue_item(const Type &item): item(item), next(NULL) {}
-	
+
 	Type item;
 	queue_item *next;
 };
@@ -93,19 +95,19 @@ class queue {
 };
 
 
-template<typename Type>
+	template<typename Type>
 int queue<Type>::size()
 {
 	return sz;
 }
 
-template<typename Type>
+	template<typename Type>
 bool queue<Type>::empty()
 {
 	return sz == 0;
 }
 
-template<typename Type>
+	template<typename Type>
 void queue<Type>::push(const Type& item)
 {
 	queue_item<Type> *temp = new queue_item<Type>(item);

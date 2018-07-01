@@ -1,52 +1,53 @@
 /*********************************************************************************
-  * Copyright (c) 2018 Shuai Ke. All rights reserved.
-  *
-  * FileName: stack.hpp
-  * Author: jerakrs
-  * Version: 1.0
-  * Date: 19/06/2018
-  * Description: The implementation of stack.
-  *
-  * Function List: 
-	1. stack::stack(): construct a stack.
-		- Params: none.
-		- Return: none.
-	2. stack::stack(stack& s): construct a stack by a exist stack.
-		- Params: a valid stack.
-		- Return: none.
-	3. stack::~stack(): release a stack.
-		- Params: none.
-		- Return: none.
-	4. stack::size(): get the number of items in the stack.
-		- Params: none.
-		- Return: the number of items in the stack.
-	5. stack::empty(): test whether stack is empty.
-		- Params: none.
-		- Return: true if the stack's size is 0, false otherwise.
-	6. stack::push(Type item): inserts a new element at the head of the stack.
-		- Params: item to which the inserted element is initialized.
-		- Return: none.
-	7. stack::pop(): removes the first element in the stack.
-		- Params: none.
-		- Return: none.
-	8. stack::top(): access the first element in the stack.
-		- Params: none.
-		- Return: a reference to the first element in the stack.
-	9. stack::operator= (stack& s): overload the copy operator.
-		- Params: a valid stack.
-		- Return: a copy of the exist stack.
-	10. stack::copy(stack& s): copy a exist stack.
-		- Params: a valid stack.
-		- Return: none.
-	11. stack::destroy(): destroy the stack.
-		- Params: none.
-		- Return: none.
-  *
-**********************************************************************************/
+ * Copyright (c) 2018 Shuai Ke. All rights reserved.
+ *
+ * FileName: stack.hpp
+ * Author: jerakrs
+ * Version: 1.0
+ * Date: 19/06/2018
+ * Description: The implementation of stack.
+ *
+ * Function List: 
+ 1. stack::stack(): construct a stack.
+ - Params: none.
+ - Return: none.
+ 2. stack::stack(stack& s): construct a stack by a exist stack.
+ - Params: a valid stack.
+ - Return: none.
+ 3. stack::~stack(): release a stack.
+ - Params: none.
+ - Return: none.
+ 4. stack::size(): get the number of items in the stack.
+ - Params: none.
+ - Return: the number of items in the stack.
+ 5. stack::empty(): test whether stack is empty.
+ - Params: none.
+ - Return: true if the stack's size is 0, false otherwise.
+ 6. stack::push(Type item): inserts a new element at the head of the stack.
+ - Params: item to which the inserted element is initialized.
+ - Return: none.
+ 7. stack::pop(): removes the first element in the stack.
+ - Params: none.
+ - Return: none.
+ 8. stack::top(): access the first element in the stack.
+ - Params: none.
+ - Return: a reference to the first element in the stack.
+ 9. stack::operator= (stack& s): overload the copy operator.
+ - Params: a valid stack.
+ - Return: a copy of the exist stack.
+ 10. stack::copy(stack& s): copy a exist stack.
+ - Params: a valid stack.
+ - Return: none.
+ 11. stack::destroy(): destroy the stack.
+ - Params: none.
+ - Return: none.
+ *
+ **********************************************************************************/
 
 #ifndef _stack_h_
 #define _stack_h_
 
+#include <cstdlib>
 
 template <typename Type>
 class stack;
@@ -56,7 +57,7 @@ class stack_item {
 	friend class stack<Type>;
 
 	stack_item(const Type &item): item(item), next(NULL) {}
-	
+
 	Type item;
 	stack_item *next;
 };
@@ -84,19 +85,19 @@ class stack {
 };
 
 
-template<typename Type>
+	template<typename Type>
 int stack<Type>::size()
 {
 	return sz;
 }
 
-template<typename Type>
+	template<typename Type>
 bool stack<Type>::empty()
 {
 	return sz == 0;
 }
 
-template<typename Type>
+	template<typename Type>
 void stack<Type>::push(const Type& item)
 {
 	stack_item<Type> *temp = new stack_item<Type>(item);
@@ -105,11 +106,10 @@ void stack<Type>::push(const Type& item)
 		fprintf(stderr, "stack: Failed to apply for memory space.\n");
 		exit(1);
 	}
-}
 
-temp->next = head;
-head = temp;
-sz++;
+	temp->next = head;
+	head = temp;
+	sz++;
 }
 
 	template<typename Type>

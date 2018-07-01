@@ -42,8 +42,8 @@ There are some templates about the classical algorithm and data structure, the c
 - [Sorting algorithm](https://github.com/JeraKrs/acm/tree/master/templates/basic_algorithm/sorting): bubble sort, insertion sort, selection sort, shell sort, heap sort, merge sort, quick sort, counting sort, radix sort.
 
 **Data Structure**
-- Linear list: queue, stack, linked list.
-- String: manachar.
+- [Linear list](https://github.com/JeraKrs/acm/tree/master/templates/data_structure/linear_list): queue, stack, skiplist.
+- String: manacher.
 - Tree:
 
 **Number Theory**

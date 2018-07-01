@@ -8,48 +8,49 @@
  * Description: The implementation of queue.
  *
  * Function List: 
- 1. queue::queue(): construct a queue.
- - Params: none.
- - Return: none.
- 2. queue::queue(queue& q): construct a queue by a exist queue.
- - Params: a valid queue.
- - Return: none.
+	1. queue::queue(): construct a queue.
+		- Params: none.
+		- Return: none.
 
- 3. queue::~queue(): release a queue.
- - Params: none.
- - Return: none.
+	2. queue::queue(queue& q): construct a queue by a exist queue.
+		- Params: a valid queue.
+		- Return: none.
 
- 4. queue::size(): get the number of items in the queue.
- - Params: none.
- - Return: the number of items in the queue.
+	3. queue::~queue(): release a queue.
+		- Params: none.
+		- Return: none.
 
- 5. queue::empty(): test whether queue is empty.
- - Params: none.
- - Return: true if the queue's size is 0, false otherwise.
+	4. queue::size(): get the number of items in the queue.
+		- Params: none.
+		- Return: the number of items in the queue.
 
- 6. queue::push(Type item): inserts a new element at the end of the queue.
- - Params: item to which the inserted element is initialized.
- - Return: none.
+	5. queue::empty(): test whether queue is empty.
+		- Params: none.
+		- Return: true if the queue's size is 0, false otherwise.
 
- 7. queue::pop(): removes the next element in the queue.
- - Params: none.
- - Return: none.
+	6. queue::push(Type item): inserts a new element at the end of the queue.
+		- Params: item to which the inserted element is initialized.
+		- Return: none.
 
- 8. queue::front(): access next element in the queue.
- - Params: none.
- - Return: a reference to the next element in the queue.
+	7. queue::pop(): removes the next element in the queue.
+		- Params: none.
+		- Return: none.
 
- 9. queue::operator= (queue& q): overload the copy operator.
- - Params: a valid queue.
- - Return: a copy of the exist queue.
+	8. queue::front(): access next element in the queue.
+		- Params: none.
+		- Return: a reference to the next element in the queue.
 
- 10. queue::copy(queue& q): copy a exist queue.
- - Params: a valid queue.
- - Return: none.
+	9. queue::operator= (queue& q): overload the copy operator.
+		- Params: a valid queue.
+		- Return: a copy of the exist queue.
 
- 11. queue::destroy(): destroy the queue.
- - Params: none.
- - Return: none.
+	10. queue::copy(queue& q): copy a exist queue.
+		- Params: a valid queue.
+		- Return: none.
+
+	11. queue::destroy(): destroy the queue.
+		- Params: none.
+		- Return: none.
  *
  **********************************************************************************/
 
@@ -65,7 +66,7 @@ template<typename Type>
 class queue_item {
 	friend class queue<Type>;
 
-	queue_item(const Type &item): item(item), next(NULL) {}
+	queue_item(const Type& item): item(item), next(NULL) {}
 
 	Type item;
 	queue_item *next;
@@ -83,7 +84,7 @@ class queue {
 		void push(const Type& item);
 		void pop();
 		Type front();
-		queue& operator= (const queue<Type> &q);
+		queue<Type>& operator= (const queue<Type>& q);
 
 	private:
 		int sz;
@@ -152,7 +153,7 @@ Type queue<Type>::front()
 }
 
 	template<typename Type>
-queue<Type>& queue<Type>::operator= (const queue &q)
+queue<Type>& queue<Type>::operator= (const queue<Type>& q)
 {
 	if (&q == this) return *this;
 

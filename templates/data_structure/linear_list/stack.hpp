@@ -8,39 +8,49 @@
  * Description: The implementation of stack.
  *
  * Function List: 
- 1. stack::stack(): construct a stack.
- - Params: none.
- - Return: none.
- 2. stack::stack(stack& s): construct a stack by a exist stack.
- - Params: a valid stack.
- - Return: none.
- 3. stack::~stack(): release a stack.
- - Params: none.
- - Return: none.
- 4. stack::size(): get the number of items in the stack.
- - Params: none.
- - Return: the number of items in the stack.
- 5. stack::empty(): test whether stack is empty.
- - Params: none.
- - Return: true if the stack's size is 0, false otherwise.
- 6. stack::push(Type item): inserts a new element at the head of the stack.
- - Params: item to which the inserted element is initialized.
- - Return: none.
- 7. stack::pop(): removes the first element in the stack.
- - Params: none.
- - Return: none.
- 8. stack::top(): access the first element in the stack.
- - Params: none.
- - Return: a reference to the first element in the stack.
- 9. stack::operator= (stack& s): overload the copy operator.
- - Params: a valid stack.
- - Return: a copy of the exist stack.
- 10. stack::copy(stack& s): copy a exist stack.
- - Params: a valid stack.
- - Return: none.
- 11. stack::destroy(): destroy the stack.
- - Params: none.
- - Return: none.
+	1. stack::stack(): construct a stack.
+		- Params: none.
+		- Return: none.
+
+	2. stack::stack(stack& s): construct a stack by a exist stack.
+		- Params: a valid stack.
+		- Return: none.
+
+	3. stack::~stack(): release a stack.
+		- Params: none.
+		- Return: none.
+
+	4. stack::size(): get the number of items in the stack.
+		- Params: none.
+		- Return: the number of items in the stack.
+
+	5. stack::empty(): test whether stack is empty.
+		- Params: none.
+		- Return: true if the stack's size is 0, false otherwise.
+
+	6. stack::push(Type item): inserts a new element at the head of the stack.
+		- Params: item to which the inserted element is initialized.
+		- Return: none.
+
+	7. stack::pop(): removes the first element in the stack.
+		- Params: none.
+		- Return: none.
+
+	8. stack::top(): access the first element in the stack.
+		- Params: none.
+		- Return: a reference to the first element in the stack.
+
+	9. stack::operator= (stack& s): overload the copy operator.
+		- Params: a valid stack.
+		- Return: a copy of the exist stack.
+
+	10. stack::copy(stack& s): copy a exist stack.
+		- Params: a valid stack.
+		- Return: none.
+
+	11. stack::destroy(): destroy the stack.
+		- Params: none.
+		- Return: none.
  *
  **********************************************************************************/
 
@@ -56,7 +66,7 @@ template<typename Type>
 class stack_item {
 	friend class stack<Type>;
 
-	stack_item(const Type &item): item(item), next(NULL) {}
+	stack_item(const Type& item): item(item), next(NULL) {}
 
 	Type item;
 	stack_item *next;
@@ -74,7 +84,7 @@ class stack {
 		void push(const Type& item);
 		void pop();
 		Type top();
-		stack& operator= (const stack<Type> &s);
+		stack<Type>& operator= (const stack<Type>& s);
 
 	private:
 		int sz;

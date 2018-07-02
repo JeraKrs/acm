@@ -27,23 +27,28 @@
 	5. skiplist::search(Key key, Val ret): get the value of a key.
 		- Params: a key and a variate to store the value.
 		- Return: true if the key is exist in the skiplist, false otherwise.
+		- Time complexity: o(log n).
 
 	6. skiplist::insert(Key key, Val ret): insert a new item in the skip list.
 		- Params: a key and a value of the key.
 		- Return: true if succeed, false otherwise.
+		- Time complexity: o(log n).
 
 	7. skiplist::update(Key key, Val ret): update the item in the skip list.
 		- Params: a key and a value of the key.
 		- Return: true is succeed, false otherwise.
+		- Time complexity: o(log n).
 	
 	8. skiplist::upsert(Key key, Val ret): insert a new item if the key is not
 		in the skip list, otherwise update the value of the key.
 		- Params: a key and a value of the key.
 		- Return: true is succeed, false otherwise.
+		- Time complexity: o(log n).
 	
 	9. skiplist::remove(Key key): remove a item in the skip list.
 		- Params: a key which needs to remove.
 		- Return: true is succeed, false otherwise.
+		- Time complexity: o(log n).
 
 	10. skiplist::operator= (skiplist& sk): overload the copy operator.
 		- Params: a valid skip list.

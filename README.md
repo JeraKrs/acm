@@ -43,7 +43,7 @@ There are some templates about the classical algorithm and data structure, the c
 
 **Data Structure**
 - [Linear list](https://github.com/JeraKrs/acm/tree/master/templates/data_structure/linear_list): queue, stack, skiplist.
-- String: manacher.
+- String: manacher, miniexpress.
 - Tree:
 
 **Number Theory**

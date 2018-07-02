@@ -11,6 +11,7 @@
 	1. manacher
 		- Params: A pointer to the C string (str).
 		- Return: The length of the longest palindromic substring in str.
+		- Time complexity: o(n).
   *
 **********************************************************************************/
 

@@ -344,6 +344,10 @@ const Skiplist<Key, Value>& Skiplist<Key, Value>::operator= (
 
 	clear();
 
+	_max_size = sk._max_size;
+	_max_level = sk._max_level;
+	_lvl_prob = sk._lvl_prob;
+
 	SkiplistItem<Key, Value>* x = sk._header->_forwards[0];
 
 	while (x) {

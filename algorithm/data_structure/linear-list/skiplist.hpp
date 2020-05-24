@@ -3,11 +3,11 @@
 //
 // @filename: skiplist.hpp
 // @author: jerakrs
-// @version: 2.0
+// @version: 2.1
 // @description: the implementation of skiplist.
 
-#ifndef ALGORITHM_STRUCTURE_SKIPLIST_HPP
-#define ALGORITHM_STRUCTURE_SKIPLIST_HPP
+#ifndef ALGORITHM_DATA_STRUCTURE_LINEAR_LIST_SKIPLIST_HPP
+#define ALGORITHM_DATA_STRUCTURE_LINEAR_LIST_SKIPLIST_HPP
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -392,4 +392,4 @@ uint32_t Skiplist<Key, Value>::random_level()
 
 } // namespace algo
 
-#endif // ALGORITHM_STRUCTURE_SKIPLIST_HPP
+#endif // ALGORITHM_DATA_STRUCTURE_LINEAR_LIST_SKIPLIST_HPP

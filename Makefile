@@ -1,6 +1,6 @@
 CXX = g++
 CFLAGS = -std=c++11 -lgtest
-INC_PATHS = ./algo
+INC_PATHS = ./algorithm/data_structure
 
 SOURCE_DIR = ./unittest
 SOURCES = $(wildcard $(SOURCE_DIR)/*.cpp)

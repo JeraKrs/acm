@@ -25,9 +25,9 @@ $(LIB_TARGET): $(LIB_OBJECTIVES)
 $(LIB_OBJECTIVES):%.o : %.cpp
 	$(CXX) $(CFLAGS) -c $< -o $@  
 
-ut: $(UT_SOURCES)
+ut: $(UT_SOURCES) $(LIB_TARGET)
 	@for obj in $(UT_OBJECTIVES); do \
-		$(CXX) $(UT_FLAGS) -I $(INC_PATHS) $(UT_SOURCE_DIR)/$$obj.cpp -o ./output/$$obj;\
+		$(CXX) $(UT_FLAGS) -I $(INC_PATHS) ./output/$(LIB_TARGET) $(UT_SOURCE_DIR)/$$obj.cpp -o ./output/$$obj;\
 	done;
 
 end:

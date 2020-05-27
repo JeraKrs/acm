@@ -13,14 +13,14 @@ UT_SOURCE_DIR = ./unittest
 UT_SOURCES = $(wildcard $(UT_SOURCE_DIR)/*.cpp)
 UT_CPPFILES = $(notdir $(UT_SOURCES))
 UT_OBJECTIVES = $(patsubst %.cpp, %, $(UT_CPPFILES))
-UT_FLAGS = $(CFLAGS) -lgtest
+UT_FLAGS = $(CFLAGS) -lgtest -fno-access-control
 
 
 all: $(LIB_TARGET) ut end
 
 $(LIB_TARGET): $(LIB_OBJECTIVES)
 	mkdir -p output
-	ar cq ./output/$(LIB_TARGET) $<
+	# ar cq ./output/$(LIB_TARGET) $<
 
 $(LIB_OBJECTIVES):%.o : %.cpp
 	$(CXX) $(CFLAGS) -c $< -o $@  

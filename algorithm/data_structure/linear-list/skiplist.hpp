@@ -121,12 +121,20 @@ public:
 	// Copies a Skiplist.
 	// @param: rhs, a given Skiplist.
 	// @return: a copied Skiplist.
-	const Skiplist<Key, Value>& operator=(const Skiplist<Key, Value>& rhs);
+	// TODO, delete
+	// const Skiplist<Key, Value>& operator=(const Skiplist<Key, Value>& rhs);
 	
 	// Empties the Skiplist.
 	void clear();
 
 private:
+
+	// No copy constructor.
+    Skiplist(const Skiplist& rhs);
+
+    // No copy operation.
+    Skiplist& operator=(const Skiplist& rhs);
+
 	uint32_t  _size;
 	uint32_t _max_size;
 	uint32_t _level;
@@ -332,33 +340,6 @@ bool Skiplist<Key, Value>::remove(const Key& key)
 		}
 	}
 	return false;
-}
-
-template <typename Key, typename Value>
-const Skiplist<Key, Value>& Skiplist<Key, Value>::operator= (
-		const Skiplist<Key, Value> &sk)
-{
-	if (&sk == this) {
-		return *this;
-	}
-
-	clear();
-
-	_max_size = sk._max_size;
-	_max_level = sk._max_level;
-	_lvl_prob = sk._lvl_prob;
-
-	SkiplistItem<Key, Value>* x = sk._header->_forwards[0];
-
-	while (x) {
-		if (!insert(x->_key, x->_val)) {
-			clear();
-			break;
-		}
-		x = x->_forwards[0];
-	}
-
-	return *this;
 }
 
 template <typename Key, typename Value>

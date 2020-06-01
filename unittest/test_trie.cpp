@@ -105,28 +105,6 @@ TEST(tes_trie, initialization) {
 	ASSERT_EQ(value, 2);
 }
 
-TEST(tes_trie, assignment) {
-	::algo::Trie<uint32_t> lhs;
-	::algo::Trie<uint32_t> rhs;
-
-	const char* key = "keyword";
-	uint32_t value;
-
-	ASSERT_EQ(lhs.insert(key, 1), true);
-	ASSERT_EQ(lhs.search(key, &value), true);
-	ASSERT_EQ(value, 1);
-
-	ASSERT_EQ(rhs.insert(key, 2), true);
-	ASSERT_EQ(rhs.search(key, &value), true);
-	ASSERT_EQ(value, 2);
-
-	lhs = rhs;
-	ASSERT_EQ(lhs.search(key, &value), true);
-	ASSERT_EQ(value, 1);
-	ASSERT_EQ(rhs.search(key, &value), true);
-	ASSERT_EQ(value, 2);
-}
-
 TEST(test_trie, alphabet) {
 	::algo::Trie<uint32_t> trie;
 

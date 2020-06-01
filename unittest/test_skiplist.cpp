@@ -82,26 +82,6 @@ TEST(test_skiplist, remove) {
 	ASSERT_EQ(sk.size(), 0);
 }
 
-TEST(test_skiplist, assignment) {
-	static const uint32_t MAX_SIZE = 10;
-	::algo::Skiplist<uint32_t, uint32_t> sk(
-			::algo::SKIPLIST_LEVEL_PROB,
-			::algo::SKIPLIST_MAX_LEVEL, MAX_SIZE);
-
-	for (uint32_t i = 0; i < MAX_SIZE; ++i) {
-		ASSERT_EQ(sk.insert(i, i + 1), true);
-		ASSERT_EQ(sk.size(), i + 1);
-	}
-
-	::algo::Skiplist<uint32_t, uint32_t> rhs;
-	rhs = sk;
-	for (uint32_t i = 0; i < MAX_SIZE; ++i) {
-		uint32_t val = 0;
-		ASSERT_EQ(sk.search(i, &val), true);
-		ASSERT_EQ(val, i + 1);
-	}
-}
-
 } // namespace unittest
 
 int main (int argc,char *argv[]) {

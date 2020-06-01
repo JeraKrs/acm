@@ -19,7 +19,8 @@ const uint32_t TRIE_MAX_NODES = 1e3;
 const uint32_t TRIE_ALPHABET_SIZE = 52;
 
 template <typename Value>
-class Trie {
+class Trie
+{
 public:
 	// Constructs a Trie.
 	Trie() : _size(0), _node_size(0)
@@ -57,10 +58,10 @@ private:
 		int _next[TRIE_ALPHABET_SIZE];
 	};
 
-	// TODO comment.
+	// No copy constructor.
 	Trie(const Trie& rhs);
 
-	// Prohibits assigment operator.
+	// No copy operation.
 	Trie& operator=(const Trie& rhs);
 
 	// Converts a character to an index.
@@ -181,12 +182,6 @@ template <typename Value>
 Trie<Value>::Trie(const Trie& rhs)
 {
 	clear();
-}
-
-template <typename Value>
-Trie<Value>& Trie<Value>::operator=(const Trie<Value>& rhs)
-{
-	return *this;
 }
 
 template <typename Value>

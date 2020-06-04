@@ -16,20 +16,19 @@ UT_OBJECTIVES = $(patsubst %.cpp, %, $(UT_CPPFILES))
 UT_FLAGS = $(CFLAGS) -lgtest -fno-access-control
 
 
-all: $(LIB_TARGET) ut end
+all: clean $(LIB_TARGET) ut end
 
 $(LIB_TARGET): $(LIB_OBJECTIVES)
 	mkdir -p output
-	# ar cq ./output/$(LIB_TARGET) $<
+	ar cq ./output/$(LIB_TARGET) $<
 
 $(LIB_OBJECTIVES):%.o : %.cpp
 	$(CXX) $(CFLAGS) -c $< -o $@  
 
 ut: $(UT_SOURCES) $(LIB_TARGET)
 	@for obj in $(UT_OBJECTIVES); do \
-		$(CXX) $(UT_FLAGS) -I $(INC_PATHS) $(UT_SOURCE_DIR)/$$obj.cpp -o ./output/$$obj;\
+		$(CXX) $(UT_FLAGS) -I $(INC_PATHS) ./output/$(LIB_TARGET) $(UT_SOURCE_DIR)/$$obj.cpp -o ./output/$$obj;\
 	done;
-	# $(CXX) $(UT_FLAGS) -I $(INC_PATHS) ./output/$(LIB_TARGET) $(UT_SOURCE_DIR)/$$obj.cpp -o ./output/$$obj;\
 
 end:
 	rm -rf $(LIB_OBJECTIVES)

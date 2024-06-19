@@ -12,30 +12,38 @@
 class BSTIterator {
 public:
     BSTIterator(TreeNode* root) {
-        while (root) {
-            s.push(root);
-            root = root->left;
+        _move = root;
+        get_left();
+    }
+
+    void get_left() {
+        while (_move && _move->left) {
+            _stack.push(_move);
+            _move = _move->left;
         }
     }
     
     int next() {
-        TreeNode* now = s.top();
-        s.pop();
-        
-        if (now->right) {
-            TreeNode* r = now->right;
-            while (r) {
-                s.push(r);
-                r = r->left;
-            }
+        int value = _move->val;
+        if (_move->right) {
+            _move = _move->right;
+            get_left();
+        } else if (!_stack.empty()) {
+            _move = _stack.top();
+            _stack.pop();
+        } else {
+            _move = NULL;
         }
-        return now->val;
+        return value;
     }
     
     bool hasNext() {
-        return !s.empty();
+        return _move;
     }
-    stack<TreeNode*> s;
+private:
+    TreeNode* _move;
+    std::stack<TreeNode*> _stack;
+
 };
 
 /**
